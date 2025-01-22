@@ -1,12 +1,13 @@
 /* src/components/Header.css */
 .header {
-    height: 100vh;
+    height: 65vh;
     /*background: linear-gradient(to bottom right, #4a90e2, #9013fe);*/
     background: linear-gradient(135deg, #1e90ff, #87cefa);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    margin: 0px 30px;
     text-align: center;
 }
 
