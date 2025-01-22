@@ -1,0 +1,66 @@
+/* src/components/Header.css */
+.header {
+    height: 100vh;
+    /*background: linear-gradient(to bottom right, #4a90e2, #9013fe);*/
+    background: linear-gradient(135deg, #1e90ff, #87cefa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.header-title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.header-tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cta-button {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button.primary {
+    background-color: white;
+    color: #4a90e2;
+    border: 2px solid white;
+}
+
+.cta-button.primary:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background-color: white;
+    color: #9013fe;
+}
