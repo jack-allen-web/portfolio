@@ -1,49 +1,57 @@
-/* src/styles/NavBar.css */
 .navbar {
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
+    display: flex;
     align-items: center;
-    /*background-color: white;*/
     padding: 20px 30px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    opacity: 1;
 }
 
-.navbar .logo a {
-    font-size: 1.8em;
-    font-weight: bold;
-    /*color: white;*/
-    color: #4b4d4b;
-    text-decoration: none;
-    letter-spacing: 1px;
+.nav-links.scrolled {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 1; /* Fully visible when scrolled */
 }
 
+/* Navigation links */
 .nav-links {
+    padding: 20px 15px;
+    border-radius: 50px;
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 15px 0;
 }
 
 .nav-links li {
     margin: 0 20px;
 }
 
+.nav-links li .active {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
 .nav-links li a {
-    /*color: #ecf0f1;*/
-    /*color: #2c3e50;*/
+    padding: 10px 15px;
+    border-radius: 20px;
     font-size: 1.2em;
-    /*color: white;*/
     color: #4b4d4b;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 .nav-links li a:hover {
-    /*color: #3498db;*/
+    color: #3498db;
 }
 
+/* Responsive styling for smaller screens */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;

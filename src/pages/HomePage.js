@@ -14,9 +14,9 @@ const HomePage = () => (
         <Header />
         <AboutMe />
         <Projects />
-        <Skills />
+        {/*<Skills />*/}
         <Contact />
-        <Footer />
+        {/*<Footer />*/}
     </>
 );
 
