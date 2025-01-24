@@ -2,6 +2,8 @@
 import React from 'react';
 import '../styles/Contact.css';
 
+// todo: add chatbot to handle the contact method for the user
+
 const Contact = () => (
     <section className="contact-section" id="contact">
         <h2>Get in Touch</h2>

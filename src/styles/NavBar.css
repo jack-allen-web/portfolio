@@ -1,9 +1,9 @@
 /* src/styles/NavBar.css */
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    background-color: white;
+    /*background-color: white;*/
     padding: 20px 30px;
     position: sticky;
     top: 0;
@@ -13,8 +13,8 @@
 .navbar .logo a {
     font-size: 1.8em;
     font-weight: bold;
-    /*color: #ecf0f1;*/
-    color: white;
+    /*color: white;*/
+    color: #4b4d4b;
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -32,8 +32,10 @@
 
 .nav-links li a {
     /*color: #ecf0f1;*/
-    color: #2c3e50;
+    /*color: #2c3e50;*/
     font-size: 1.2em;
+    /*color: white;*/
+    color: #4b4d4b;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }

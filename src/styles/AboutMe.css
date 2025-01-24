@@ -1,7 +1,9 @@
 /* src/components/AboutMe.css */
 .about-me {
-    color: #333;
+    /*color: #333;*/
+    /*color: white;*/
     padding: 50px 20px;
+    color: #4b4d4b;
     text-align: center;
 }
 
@@ -15,7 +17,8 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #4a90e2;
+    /*color: #4a90e2;*/
+    color: #4b4d4b;
 }
 
 .about-me-text {
