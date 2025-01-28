@@ -1,6 +1,6 @@
 /* src/components/Header.css */
 .header {
-    height: 40vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,7 @@
 }
 
 .header-title {
-    font-size: 7rem;
+    font-size: 8rem;
     font-weight: bold;
     margin-bottom: 20px;
     font-family: 'Arial', sans-serif;
@@ -62,4 +62,33 @@
 .cta-button.secondary:hover {
     background-color: white;
     color: #9013fe;
+}
+
+.waving-hand {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    transform-origin: 70% 70%; /* Adjust the origin to look like it's waving from the base */
+    font-size: 1.2em; /* Adjust the size of the emoji if necessary */
+}
+
+/* Define the keyframes for the waving motion */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }

@@ -3,12 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*background: linear-gradient(#89216b, #da4453);*/
     background: rgb(240,238,225);
     background: linear-gradient(0deg, rgba(240,238,225,1) 63%, rgba(160,213,173,1) 100%);
-    /*background: rgb(255,255,255);*/
-    /*background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(146,249,248,1) 59%, rgba(125,208,224,1) 100%);*/
-    /*background-color: #f5f5f5;*/
 }
 a {
     text-decoration: none;

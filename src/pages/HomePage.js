@@ -7,15 +7,17 @@ import Skills from "../components/Skills";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import "../styles/Global.css"
+import EcommerceSite from "../components/EcommerceSite";
 
 const HomePage = () => (
     <>
         <NavBar />
         <Header />
-        <AboutMe />
-        <Projects />
+        <EcommerceSite />
+        {/*<AboutMe />*/}
+        {/*<Projects />*/}
         {/*<Skills />*/}
-        <Contact />
+        {/*<Contact />*/}
         {/*<Footer />*/}
     </>
 );
