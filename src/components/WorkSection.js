@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from "react";
-import "../styles/WorkSection.css"; // Updated CSS file for the work section
-import projectImage1 from "../images/sales_website.jpeg"; // Example images for the projects
+import React, { useState, useEffect } from "react";
+import "../styles/WorkSection.css";
+import projectImage1 from "../images/sales_website.jpeg";
 import projectImage2 from "../images/Example-of-a-mobile-app.jpg";
+import projectImage3 from "../images/software-development-project-ideas.png";
 
 const WorkSection = () => {
     const projects = [
@@ -16,7 +17,11 @@ const WorkSection = () => {
             description: "Description of Project 2.",
             image: projectImage2,
         },
-        // Add more projects here
+        {
+            title: "Project 3",
+            description: "Description of Project 3.",
+            image: projectImage3,
+        },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,12 +38,6 @@ const WorkSection = () => {
         );
     };
 
-    useEffect(() => {
-        const intervalId = setInterval(nextProject, 5000);
-
-        return () => clearInterval(intervalId);
-    }, []);
-
     return (
         <section className="work-section">
             <div className="carousel-container">
@@ -46,20 +45,33 @@ const WorkSection = () => {
                     &#10094;
                 </button>
 
-                <div className={`carousel-item ${currentIndex === currentIndex ? "show" : ""}`}>
-                    <div className="work-left">
-                        <img
-                            src={projects[currentIndex].image}
-                            alt={projects[currentIndex].title}
-                            className="work-image"
-                        />
-                    </div>
-                    <div className="work-right">
-                        <h2 className="work-title">{projects[currentIndex].title}</h2>
-                        <p className="work-description">
-                            {projects[currentIndex].description}
-                        </p>
-                    </div>
+                <div className="work-container">
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+                            className={`work-box ${
+                                index === currentIndex
+                                    ? "active"
+                                    : index === (currentIndex + 1) % projects.length
+                                        ? "next"
+                                        : index === (currentIndex - 1 + projects.length) % projects.length
+                                            ? "prev"
+                                            : "behind"
+                            }`}
+                        >
+                            <div className="work-left">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="work-image"
+                                />
+                            </div>
+                            <div className="work-right">
+                                <h2 className="work-title">{project.title}</h2>
+                                <p className="work-description">{project.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 <button className="carousel-next" onClick={nextProject}>
@@ -71,3 +83,4 @@ const WorkSection = () => {
 };
 
 export default WorkSection;
+

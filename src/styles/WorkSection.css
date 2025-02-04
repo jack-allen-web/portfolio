@@ -9,29 +9,64 @@
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Prevent image overflow during transition */
 }
 
 .carousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     position: relative;
-    height: 500px;
+    width: 100%;
 }
 
-.carousel-item {
+.work-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    position: relative;
     width: 80%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    height: 400px; /* Adjust height for readability */
 }
 
-.carousel-item.show {
+.work-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 1s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    height: 100%; /* Ensure the box takes up full height */
+    width: 30%; /* Adjust width for better layout */
+}
+
+.work-box.active {
     opacity: 1;
+    visibility: visible;
+    transform: translateX(0) translateY(-50%); /* Centered in the middle */
+    z-index: 2;
+    width: 40%; /* Larger width for the active project */
+}
+
+.work-box.next {
+    opacity: 0.7;
+    visibility: visible;
+    transform: translateX(100%) translateY(-50%); /* Position to the right */
+    z-index: 1;
+    width: 30%;
+}
+
+.work-box.prev {
+    opacity: 0.7;
+    visibility: visible;
+    transform: translateX(-100%) translateY(-50%); /* Position to the left */
+    z-index: 1;
+    width: 30%;
+}
+
+.work-box.behind {
+    opacity: 0.3;
+    visibility: hidden; /* Hide the far-off projects */
 }
 
 .work-left,
@@ -79,7 +114,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: 3;
 }
 
 .carousel-prev {
@@ -93,17 +128,4 @@
 .carousel-prev:hover,
 .carousel-next:hover {
     color: #3498db;
-}
-
-@keyframes slide-in {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.carousel-item {
-    animation: slide-in 1s ease-out;
 }
