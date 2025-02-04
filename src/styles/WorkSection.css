@@ -5,9 +5,8 @@
     margin: 50px auto;
     padding: 20px;
     max-width: 1200px;
-
     position: relative;
-    overflow: hidden; /* Prevent image overflow during transition */
+    /*overflow: hidden; !* Prevent image overflow during transition *!*/
 }
 
 .carousel-container {
@@ -27,20 +26,20 @@
 }
 
 .work-box {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     transition: all 1s ease;
-    opacity: 0;
+    /*opacity: 0;*/
     visibility: hidden;
     z-index: 0;
-    height: 95%; /* Ensure the box takes up full height */
+    height: 90%; /* Ensure the box takes up full height */
     width: 70%; /* Adjust width for better layout */
     display: flex;
-    padding: 15px 35px;
+    padding: 30px 35px;
 }
 
 .work-box.active {
@@ -48,8 +47,15 @@
     visibility: visible;
     transform: translateX(0) translateY(-50%); /* Centered in the middle */
     z-index: 2;
-    width: 80%; /* Larger width for the active project */
+    width: 85%; /* Larger width for the active project */
     height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.work-box.next,
+.work-box.prev,
+.work-box.behind {
+    filter: blur(2px); /* Adjust the value to control the level of blur */
 }
 
 .work-box.next {
