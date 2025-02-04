@@ -1,0 +1,55 @@
+.about-me-container {
+    display: flex;
+    justify-content: center; /* Center the about-me-header horizontally */
+    margin: 0px 30px;
+    text-align: center;
+}
+
+.about-me-header {
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #4b4d4b;
+    width: 100%;
+    max-width: 800px; /* Ensures that it doesn't grow too large */
+    height: auto; /* Let the height adjust based on content */
+}
+
+.about-me-header-icon {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    margin-right: 20px; /* Space between the avatar and title */
+}
+
+.about-me-header-title {
+    display: flex;
+    align-items: center; /* Vertically centers the title text */
+    justify-content: center;
+    flex-grow: 1; /* Takes up the remaining space */
+}
+
+.about-me-header-title h3 {
+    font-weight: lighter;
+}
+
+
+.about-me-header img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+}
+
+/* Optional: Media query for responsiveness */
+@media (max-width: 768px) {
+    .about-me-header {
+        flex-direction: column; /* Stack the image and title vertically */
+        text-align: center;
+    }
+    .about-me-header-icon {
+        margin-bottom: 10px; /* Space between image and title */
+    }
+    .about-me-header-title {
+        padding-left: 0; /* Remove left padding for smaller screens */
+    }
+}
