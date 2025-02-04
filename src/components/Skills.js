@@ -2,7 +2,6 @@
 import React from 'react';
 import { FaPython, FaJava, FaAws, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiDjango, SiPostgresql, SiDocker, SiKubernetes, SiGraphql } from 'react-icons/si';
-import '../styles/Skills.css';
 
 
 const Skills = () => (

@@ -2,21 +2,18 @@ import React from 'react';
 import NavBar from '../components/NavBar'
 import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
-import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import "../styles/Global.css"
-import EcommerceSite from "../components/EcommerceSite";
+import Work from "../components/WorkSection";
 
 const HomePage = () => (
     <>
         <NavBar />
         <Header />
-        <EcommerceSite />
+        <Work />
         {/*<AboutMe />*/}
-        {/*<Projects />*/}
-        {/*<Skills />*/}
         {/*<Contact />*/}
         {/*<Footer />*/}
     </>
