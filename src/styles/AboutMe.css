@@ -1,17 +1,28 @@
-.about-me-container {
+.about-me {
     display: flex;
     flex-direction: column; /* Stack header and description vertically */
     align-items: center; /* Center everything horizontally */
     justify-content: center;
     margin: 0px 30px;
-    padding-bottom: 90px;
+    padding-bottom: 110px;
     text-align: center;
 }
 
-.about-me-header {
+.about-me-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    max-width: 1200px;
+    width: 65%;
+    border-radius: 13px;
+    padding: 20px 20px 40px 20px;
+    border: thick double #4b4d4b;
+}
+
+.about-me-header {
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
     color: #4b4d4b;
     width: 100%;
@@ -20,22 +31,27 @@
 }
 
 .about-me-header-icon {
+    display: flex;
+    justify-content: center;
+    height: 50px;
     flex-shrink: 0; /* Prevent the avatar from shrinking */
-    padding-left: 90px;
-    margin-right: 30px; /* Space between avatar and title */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
 }
 
 .about-me-header-title {
-    text-align: left;
+    text-align: center;
     padding-left: 70px;
 }
 
-.about-me-header img {
+.about-me-header-icon img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%) /* Centered in the middle */
+
 }
 
 /* Description Section */
@@ -48,29 +64,6 @@
     font-size: 1.2rem;
     margin-bottom: 10px;
     line-height: 1.5;
-}
-
-/* Button styling */
-.read-more-btn {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.read-more-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Expanded description */
-.about-me-expanded-description {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    text-align: left;
 }
 
 /* Optional: Media query for responsiveness */
