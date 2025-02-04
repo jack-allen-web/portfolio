@@ -1,55 +1,82 @@
 .about-me-container {
     display: flex;
-    justify-content: center; /* Center the about-me-header horizontally */
+    flex-direction: column; /* Stack header and description vertically */
+    align-items: center; /* Center everything horizontally */
+    justify-content: center;
     margin: 0px 30px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
 .about-me-header {
     display: flex;
-    align-items: center; /* Center the items vertically */
+    align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #4b4d4b;
     width: 100%;
-    max-width: 800px; /* Ensures that it doesn't grow too large */
-    height: auto; /* Let the height adjust based on content */
+    max-width: 800px;
+    margin-bottom: 20px; /* Adds some space below the header */
 }
 
 .about-me-header-icon {
-    flex-shrink: 0; /* Prevents the image from shrinking */
-    margin-right: 20px; /* Space between the avatar and title */
+    flex-shrink: 0; /* Prevent the avatar from shrinking */
+    margin-right: 20px; /* Space between avatar and title */
 }
 
 .about-me-header-title {
-    display: flex;
-    align-items: center; /* Vertically centers the title text */
-    justify-content: center;
-    flex-grow: 1; /* Takes up the remaining space */
+    text-align: center;
 }
-
-.about-me-header-title h3 {
-    font-weight: lighter;
-}
-
 
 .about-me-header img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    object-fit: cover;
+}
+
+/* Description Section */
+.about-me-description-container {
+    max-width: 800px; /* Same width as the header */
+    padding: 0 20px;
+}
+
+.about-me-description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Button styling */
+.read-more-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Expanded description */
+.about-me-expanded-description {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: left;
 }
 
 /* Optional: Media query for responsiveness */
 @media (max-width: 768px) {
     .about-me-header {
-        flex-direction: column; /* Stack the image and title vertically */
+        flex-direction: column; /* Stack avatar and title on small screens */
         text-align: center;
     }
     .about-me-header-icon {
-        margin-bottom: 10px; /* Space between image and title */
-    }
-    .about-me-header-title {
-        padding-left: 0; /* Remove left padding for smaller screens */
+        margin-bottom: 10px; /* Adjust space for small screens */
     }
 }
