@@ -24,7 +24,7 @@ const AboutMe = () => {
             {/* Description Section */}
             <div className="about-me-description-container">
                 <p className="about-me-description">
-                    Hey there! 👋 I'm a software engineer who loves to bring ideas to life through code. Whether it's building sleek e-commerce platforms, crafting intuitive mobile apps, or designing robust web applications...
+                    Hey there! 👋 I'm a software engineer who loves to bring ideas to life through code. Whether it's building sleek e-commerce platforms, crafting intuitive mobile apps, or designing robust web applications, I love to create!
                 </p>
                 {/*<button className="read-more-btn" onClick={toggleExpanded}>*/}
                 {/*    {expanded ? 'Read Less' : 'Read More'}*/}
