@@ -37,9 +37,10 @@
     opacity: 0;
     visibility: hidden;
     z-index: 0;
-    height: 100%; /* Ensure the box takes up full height */
-    width: 30%; /* Adjust width for better layout */
+    height: 95%; /* Ensure the box takes up full height */
+    width: 70%; /* Adjust width for better layout */
     display: flex;
+    padding: 15px 35px;
 }
 
 .work-box.active {
@@ -47,7 +48,8 @@
     visibility: visible;
     transform: translateX(0) translateY(-50%); /* Centered in the middle */
     z-index: 2;
-    width: 70%; /* Larger width for the active project */
+    width: 80%; /* Larger width for the active project */
+    height: 100%;
 }
 
 .work-box.next {
@@ -55,7 +57,7 @@
     visibility: visible;
     transform: translateX(100%) translateY(-50%); /* Position to the right */
     z-index: 1;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 .work-box.prev {
@@ -63,7 +65,7 @@
     visibility: visible;
     transform: translateX(-100%) translateY(-50%); /* Position to the left */
     z-index: 1;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 .work-box.behind {
