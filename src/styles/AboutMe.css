@@ -3,7 +3,7 @@
     flex-direction: column; /* Stack header and description vertically */
     align-items: center; /* Center everything horizontally */
     justify-content: center;
-    margin: 0px 30px;
+    margin: 0px 30px 120px 0;
     padding-bottom: 110px;
     text-align: center;
 }
@@ -16,7 +16,7 @@
     max-width: 1200px;
     width: 65%;
     border-radius: 13px;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 60px 20px;
     border: thick double #4b4d4b;
 }
 
@@ -27,7 +27,7 @@
     color: #4b4d4b;
     width: 100%;
     max-width: 800px;
-    margin-bottom: 40px; /* Adds some space below the header */
+    margin-bottom: 10px; /* Adds some space below the header */
 }
 
 .about-me-header-icon {
@@ -50,7 +50,7 @@
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-50%) /* Centered in the middle */
+    transform: translateY(-60%) /* Centered in the middle */
 
 }
 
